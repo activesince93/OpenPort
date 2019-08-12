@@ -15,6 +15,13 @@ class MainActivity : AppCompatActivity() {
         btnOpenPort.setOnClickListener {
             runOpenPortShellScript()
         }
+        btnGetDeviceIP.setOnClickListener {
+            getDeviceIP()
+        }
+    }
+
+    private fun getDeviceIP() {
+        btnGetDeviceIP.text = getString(R.string.device_ip_value, Utils.getIPAddress(true))
     }
 
     /**
