@@ -1,10 +1,10 @@
 package active.since93.open.port
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
+import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.DataOutputStream
-import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
 
@@ -44,10 +44,11 @@ class MainActivity : AppCompatActivity() {
             outputStream.flush()
 
             su.waitFor()
-        } catch (e: IOException) {
-            throw Exception(e)
-        } catch (e: InterruptedException) {
-            throw Exception(e)
+        } catch (e: Exception) {
+            AlertDialog.Builder(this)
+                .setMessage(e.toString())
+                .setPositiveButton(getString(R.string.okay), null)
+                .show()
         }
     }
 }

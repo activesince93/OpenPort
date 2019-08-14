@@ -3,4 +3,5 @@
     <string name="open_port">Open Port</string>
     <string name="device_ip">Device IP</string>
     <string name="device_ip_value">Device IP: %s</string>
+    <string name="okay">Okay</string>
 </resources>
