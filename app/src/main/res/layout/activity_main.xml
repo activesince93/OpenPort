@@ -11,7 +11,7 @@
             android:id="@+id/btnOpenPort"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/open_port"
+            android:text="@string/open_port_5555"
             app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintBottom_toTopOf="@+id/btnGetDeviceIP"
             app:layout_constraintLeft_toLeftOf="parent"
